@@ -1,11 +1,19 @@
-import React from 'react'
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "./pages/Login"
+import Navbar from "./Component/Navbar"
 
 const App = () => {
   return (
-    <div className='w-full h-[100vh] bg-gray-900 text-[#ababab]' >
-      App
-    </div>
-  )
-}
+    <>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Login />}/>
+        </Routes>
+      </Router>
+    </>
+  );
+};
 
-export default App
+export default App;

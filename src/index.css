@@ -1,11 +1,13 @@
 @import "tailwindcss";
 
+*{
+  outline: none;
+  box-sizing: border-box;
+}
+
 body {
   background-color: black;
   color: white;
-  outline: none;
-  border: none;
-  box-sizing: border-box;
 }
 
 .corner-gradient-border {

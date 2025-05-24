@@ -1,13 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaUser } from "react-icons/fa6";
 import { FaUnlockKeyhole } from "react-icons/fa6";
 
 const Login = () => {
+  
+  const [user, setUser] = useState("");
+  const [pass, setPass] = useState("");
+
+  const handleUser = (e) => {
+    console.log(e)
+    setUser(e.target.value);
+  }
+
+  const handlePass = (e) => {
+    setPass(e.target.value);
+  }
+
   return (
     <div className="w-full h-[90vh] flex items-center justify-center -mt-8">
 
       {/* form div */}
-      <div className="corner-gradient-border w-96 px-10 py-18 flex flex-col items-center relative">
+      <div className="corner-gradient-border w-96 px-12 py-18 flex flex-col items-center relative">
 
         {/* css divs */}
         <div className="w-75 absolute top-0 right-0 bg-black h-2"></div>
@@ -17,7 +30,7 @@ const Login = () => {
         <h2 className="text-5xl mb-14">Login</h2>
 
         {/* Form */}
-        <form>
+        <form method="post" className="w-full">
 
           {/* name div */}
           <div className="flex items-center mb-10">
@@ -25,7 +38,10 @@ const Login = () => {
               <FaUser size={21} />
             </label>
             <input
-              className="w-70 px-3 border-b text-lg"
+              name="username"
+              value={user}
+              onChange={handleUser}
+              className="w-full px-3 border-b text-lg"
               type="text"
               placeholder="Username"
             />
@@ -37,7 +53,10 @@ const Login = () => {
               <FaUnlockKeyhole size={21} />
             </label>
             <input
-              className="w-70 px-3 border-b text-lg"
+              name="password"
+              value={pass}
+              onChange={handlePass}
+              className="w-full px-3 border-b text-lg"
               type="password"
               placeholder="Password"
             />

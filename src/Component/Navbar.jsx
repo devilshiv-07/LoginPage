@@ -27,7 +27,7 @@ const Navbar = () => {
 
       {/* Conditional rendering of sidebar */}
       {sideBar ? (
-        <div className="h-[90vh] bg-[#232323] w-[60vw] sm:w-[45vw] z-10 flex flex-col gap-10 md:hidden absolute top-[8vh] right-[10px] pt-10 px-2 sm:pt-12 sm:px-6 rounded-lg">
+        <div className="h-[90vh] bg-[#232323] w-[60vw] sm:w-[45vw] z-30 flex flex-col gap-10 md:hidden absolute top-[8vh] right-[10px] pt-10 px-2 sm:pt-12 sm:px-6 rounded-lg">
         <Link
           to={"/"}
           className="hover:bg-teal-500 rounded-md py-1 px-3"

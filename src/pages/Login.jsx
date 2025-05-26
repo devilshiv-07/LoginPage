@@ -17,14 +17,14 @@ const Login = () => {
   }
 
   return (
-    <div className="w-full h-[90vh] flex items-center justify-center -mt-8">
+    <div className="w-full h-[92vh] md:h-[90vh] flex items-center justify-center -mt-16 sm:-mt-6 lg:-mt-8">
 
       {/* form div */}
-      <div className="corner-gradient-border w-96 px-12 py-18 flex flex-col items-center relative">
+      <div className="corner-gradient-border w-76 md:w-86 lg:w-96 px-8 md:px-10 lg:px-12 py-18 flex flex-col items-center relative">
 
         {/* css divs */}
-        <div className="w-75 absolute top-0 right-0 bg-black h-2"></div>
-        <div className="w-75 absolute bottom-0 left-0 bg-black h-2"></div>
+        <div className="w-58 md:w-66 lg:w-75 absolute top-0 right-0 bg-black h-2"></div>
+        <div className="w-58 md:w-66 lg:w-75 absolute bottom-0 left-0 bg-black h-2"></div>
 
         {/* Login Heading */}
         <h2 className="text-5xl mb-14">Login</h2>
